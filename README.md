@@ -37,6 +37,14 @@ YAML形式のデータファイル(例:`data.yaml`)とスタイルファイル(�
 $ ruby make_cv -i data.yaml -s style.yaml -o output.pdf
 ```
 
+
+docker run -d --name rsm resume:latest
+docker cp photo.jpg rsm:/root/resume/photo.jpg
+docker exec rsm ruby make_cv.rb -i data.yaml -s style.txt -o out.pdf
+
+docker cp rsm:/root/resume/out.pdf out.pdf
+docker exec -it rsm sh
+
 添付のサンプルでは以下のような出力が得られます。
 
 [PDFファイル](sample/output.pdf)
