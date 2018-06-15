@@ -45,6 +45,10 @@ docker exec rsm ruby make_cv.rb -i data.yaml -s style.txt -o out.pdf
 docker cp rsm:/root/resume/out.pdf out.pdf
 docker exec -it rsm sh
 
+ruby ./src/make_cv.rb -i data.yaml -s ./data/style.yaml -o o.pdf
+
+ruby ./src/txt2yaml.rb ./data/style.txt > ./data/style.yaml
+
 添付のサンプルでは以下のような出力が得られます。
 
 [PDFファイル](sample/output.pdf)
@@ -78,7 +82,7 @@ birth_day: 1543年1月31日 (満 73 歳)
 gender: 男
 cell_phone: 090-1234-5678
 email: hoge@hogehoge.org
-photo: photo.jpg
+photo: ./data/photo.jpg
 
 # 住所
 address_kana: とうきょうとちよだくちよだ

@@ -1,10 +1,10 @@
-all: output.pdf academic.pdf
+all: 1 2
 
-output.pdf: style.txt data.yaml
-	ruby make_cv.rb -i data.yaml -s style.txt -o $@
+1:
+	ruby ./src/make_cv.rb -i ./data/data.yaml -s ./data/style.txt -o ./out/output.pdf
 
-academic.pdf: academic.txt data.yaml
-	ruby make_cv.rb -i data.yaml -s academic.txt -o $@
+2:
+	ruby ./src/make_cv.rb -i ./data/data.yaml -s ./data/academic.txt -o ./out/academic.pdf
 
 clean:
-	rm -f output.pdf academic.pdf
+	rm -f ./out/output.pdf ./out/academic.pdf
