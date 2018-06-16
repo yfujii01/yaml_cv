@@ -8,3 +8,17 @@ all: 1 2
 
 clean:
 	rm -f ./out/output.pdf ./out/academic.pdf
+
+build:
+	docker build -t resume:latest .
+
+run:
+	docker stop resume
+	docker rm resume
+	docker run -d --name resume resume:latest
+
+exec:
+	docker cp ./makefile resume:/makefile
+	docker cp ./data resume:/data
+	docker exec resume make all
+	docker cp resume:/out .
