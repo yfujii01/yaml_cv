@@ -299,7 +299,8 @@ and place them as
 ├── fonts
 │   ├── ipaexg.ttf
 │   └── ipaexm.ttf
-└── make_cv.rb
+└── src
+    └── make_cv.rb
 EOS
 
       exit

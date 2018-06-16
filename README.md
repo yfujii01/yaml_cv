@@ -16,7 +16,8 @@ Prawnから日本語を出力するためにIPAexフォントを使っていま�
 ├── fonts
 │   ├── ipaexg.ttf
 │   └── ipaexm.ttf
-└── make_cv.rb
+└── src
+    └── make_cv.rb
 ```
 
 ## 使い方
